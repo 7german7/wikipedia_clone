@@ -1,13 +1,23 @@
-body {
+* {
   padding: 0;
   margin: 0;
   font-family: Linux Libertine,Hoefler Text,Georgia,Times New Roman,Times,serif;
   font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
-/*Header styles*/
+h1 {
+  font-size: 25px;
+}
 
-header section {
+/*Variables*/
+:root {
+  --wiki-blue: #36c;
+}
+
+/*Header logo section styles*/
+
+header section .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,25 +25,169 @@ header section {
   width: 100%;
   height: auto;
   padding-top: 30px;
-  min-width: 320px;
 }
 
-header .logo-container img {
+header section .logo-container img {
   max-width: 60px;
   max-height: 60px;
 }
 
-header .logo-description-container {
+header section .logo-description-container {
   padding-left: 10px;
 }
 
-header .logo-description-container h1 {
+header section .logo-description-container h1 {
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-header .logo-description-container p {
+header section .logo-description-container p {
   padding-top: 0;
   margin-top: 0;
 }
 
+/*Header searching section styles*/
+header section .search-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header section .search-container {
+  border: 1px solid #A2A9B1;
+  border-radius: 2px 0px 0px 2px;
+  width: 80%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header section .search-container:hover {
+  border: 1px solid black;
+}
+
+header section .input-search {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 40px;
+}
+
+header section .select-search {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 36px;
+}
+
+header section .buttom-search {
+  border: none;
+  height: 44px;
+  width: 20%;
+  background-color: #3366CC;
+  color: white;
+  border-radius: 0px 2px 2px 0px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header section .buttom-search .search-icon {
+  background-image: url('../img/search-icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 19px;
+  height: 19px;
+}
+
+header section .buttom-search:hover {
+  background-color: #447FF5;
+}
+
+/*Header Section Articules Styles*/
+
+header section .article-container {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+header section .article-container article {
+  width: 30%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+header section .article-container article h2 {
+  padding-bottom: 5px;
+}
+
+header section .article-container article p,a {
+  font-size: 13px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Lato,Helvetica,Arial,sans-serif;
+}
+
+header section .article-container a {
+  text-decoration: none;
+  color: var(--wiki-blue);
+}
+
+header section .article-container p {
+  color: #54595d;
+}
+
+/*Readion Buttom Section Styles*/
+header section .reading-language-container {
+  width: 98%;
+  padding-top: 30px;
+}
+
+header section .buttom-reading-container a {
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  color: var(--wiki-blue);
+  padding: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+header section .buttom-reading-container a:active {
+  border-color: var(--wiki-blue);
+  box-shadow: inset 0 0 0 1px var(--wiki-blue);
+}
+
+header section a .translate-icon {
+  background-image: url('../img/translate-icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 19px;
+  padding: 0px 10px 0px 10px;
+}
+
+header section a .arrow-icon {
+  background-image: url('../img/arrow-down-2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 11px;
+}
+
+header section .reading-language-separator {
+  width: 100%;
+  padding-top: 40px;
+}
